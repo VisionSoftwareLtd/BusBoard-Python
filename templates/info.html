@@ -4,7 +4,10 @@
 <div class="container body-content">
     <h2>Bus Information</h2>
     <div>
-        <p>You entered postcode <span>{{ postcode }}</span></p>
+        <p>You entered atcocode <span>{{ atcocode }}</span></p>
     </div>
+    {% for item in items %}
+        <div>Bus {{ item.busNumber }} due to arrive at {{ item.expectedArrivalTime }}</div>
+    {% endfor %}
 </div>
 {% endblock %}
